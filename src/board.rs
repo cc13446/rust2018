@@ -7,9 +7,7 @@ pub struct Board {
 pub fn new_board() -> Board{
     let b: [[u32; crate::SIZE]; crate::SIZE] = [[0;4];4];
     let mut result = Board{board:b};
-    println!("{}",result.to_string());
     result.random_one_tile();
-    println!("{}",result.to_string());
     result.random_one_tile();
     return result;
 }

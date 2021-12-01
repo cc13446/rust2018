@@ -18,7 +18,7 @@ fn main() {
             "d\n" => board.right(),
             _ => {0}
         };
-        is_over = (board.random_one_tile() == 0);
+        is_over = board.random_one_tile() == 0;
     }
 
 }
