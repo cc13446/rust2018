@@ -11,11 +11,11 @@ fn main() {
         println!("{}", board.to_string());
         let mut line = String::new();
         std::io::stdin().read_line(&mut line).unwrap();
-        score += match line.as_str() {
-            "w\n" => board.top(),
-            "a\n" => board.left(),
-            "s\n" => board.down(),
-            "d\n" => board.right(),
+        score += match line.chars().next().unwrap() {
+            'w' => board.top(),
+            'a' => board.left(),
+            's' => board.down(),
+            'd' => board.right(),
             _ => {0}
         };
         is_over = board.random_one_tile() == 0;
